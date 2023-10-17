@@ -2,11 +2,12 @@ body{
     font-family: 'Impact', sans-serif;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:center, space-around;
     align-items:center;
     background-color: #252422;
 }
 button{
+    font-family: 'Impact', sans-serif;
     height:30px;
     width:70px;
     border-radius:80px;
@@ -28,7 +29,13 @@ button{
 
     border: 12px; 
     padding: 10px;    
-
+}
+.small{
+    font-size:smaller;
+    color:#ccc5b9;
+}
+.big{
+    font-size:x-large;
 }
 
 .numbers{
@@ -40,9 +47,10 @@ button{
     padding: 15px;
 }
 .numbtn{
-    height:110px;
-    width:130px;
+    height:80px;
+    width:65px;
     font-size:large;
+    margin:12px;
 }
 .operators{
     display: flex;
