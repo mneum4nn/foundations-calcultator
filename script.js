@@ -66,7 +66,7 @@ equalsBtn.addEventListener('click',(event)=>{
 })
 
 function sum (x,y){
-    return x+y;
+    return parseInt(x)+parseInt(y);
 }
 function subtract (x,y){
     return x-y;
