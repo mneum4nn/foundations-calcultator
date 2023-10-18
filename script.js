@@ -15,13 +15,12 @@ let curVal ='';
 let num1=''; 
 let num2='';
 
-numberBtns.forEach((number)=>{
+numberBtns.forEach((number)=> {
     number.addEventListener('click', function(e){
         handleNumber(e.target.textContent);
         bigNumbers.textContent = curVal;
     });
 });
-
 
 function handleNumber(num){
     curVal+=num;
@@ -31,7 +30,6 @@ function handleNumber(num){
     else {
         num1+=num;
     }
-
 }
 
 clearBtn.addEventListener('click',(event)=> clearScreen());
@@ -46,7 +44,7 @@ function clearScreen(){
 }
 operatorBtns.forEach((opp) => {
     opp.addEventListener('click', function(e){
-        operator = e.target.id;
+        operator = e.target.textContent;
         curVal+=operator;
         bigNumbers.textContent=curVal;
     });
