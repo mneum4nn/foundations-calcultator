@@ -44,8 +44,8 @@ function clearScreen(){
 }
 operatorBtns.forEach((opp) => {
     opp.addEventListener('click', function(e){
-        operator = e.target.textContent;
-        curVal+=operator;
+        operator = e.target.id;
+        curVal+=e.target.textContent;
         bigNumbers.textContent=curVal;
     });
 });
@@ -54,7 +54,11 @@ operatorBtns.forEach((opp) => {
 equalsBtn.addEventListener('click',(event)=>{
     prevVal = curVal;
     lilNumbers.textContent = prevVal;
-    curVal = operate(operator,num1,num2);
+
+    let reformatNum1 = num1.split(' ').join('');
+    let reformatNum2 = num2.split(' ').join('');
+
+    curVal = operate(operator,reformatNum1,reformatNum2);
     bigNumbers.textContent = curVal;
     operator = '';
     num1 = '';
